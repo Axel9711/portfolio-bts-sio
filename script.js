@@ -1,5 +1,5 @@
 // 1. Effet Machine à Écrire (Typewriter)
-const words = ["Étudiant BTS SIO", "Futur Développeur / Admin", "Passionné de Tech"];
+const words = ["Étudiant BTS SIO SISR", "Admin Systèmes & Réseaux", "Futur Ingénieur Cybersécurité"];
 let i = 0;
 let timer;
 
