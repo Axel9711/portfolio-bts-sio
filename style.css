@@ -307,3 +307,62 @@ footer {
   position: relative;
   z-index: 1;
 }
+
+/* ==========================================
+   STYLE CARTE STAGE SIO 1
+   ========================================== */
+
+.stage-box {
+  background-color: #0b131e;
+  border: 1px solid #1e293b;
+  border-left: 4px solid #00d2ff;
+  border-radius: 6px;
+  padding: 20px 24px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.stage-title {
+  color: #00d2ff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-family: inherit;
+}
+
+.stage-cadre {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.stage-cadre strong {
+  color: #ffffff;
+}
+
+.stage-subtitle {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  color: #ffffff;
+}
+
+.stage-missions {
+  margin: 0;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.stage-missions li {
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #cbd5e1;
+}
+
+.stage-missions li strong {
+  color: #ffffff;
+}
