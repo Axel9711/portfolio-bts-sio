@@ -1,26 +1,26 @@
 :root {
   --bg-color: #0a0e17;
-  --bg-card: rgba(16, 23, 38, 0.7);
-  --border-color: #00f3ff33;
+  --bg-card: rgba(16, 23, 38, 0.85);
+  --border-color: rgba(0, 243, 255, 0.25);
   --text-main: #e2e8f0;
   --text-muted: #8892b0;
   --accent-cyan: #00f3ff;
   --accent-green: #00ff66;
   --accent-purple: #bd00ff;
-  --glow-cyan: 0 0 15px rgba(0, 243, 255, 0.4);
+  --glow-cyan: 0 0 15px rgba(0, 243, 255, 0.35);
   --font-mono: 'Fira Code', 'Courier New', monospace;
 }
 
 [data-theme="light"] {
   --bg-color: #f0f4f8;
-  --bg-card: rgba(255, 255, 255, 0.85);
-  --border-color: rgba(0, 102, 255, 0.2);
+  --bg-card: rgba(255, 255, 255, 0.9);
+  --border-color: rgba(0, 102, 255, 0.25);
   --text-main: #0f172a;
   --text-muted: #475569;
   --accent-cyan: #0066ff;
   --accent-green: #00a843;
   --accent-purple: #8b00cc;
-  --glow-cyan: 0 0 15px rgba(0, 102, 255, 0.25);
+  --glow-cyan: 0 0 15px rgba(0, 102, 255, 0.2);
 }
 
 * {
@@ -30,16 +30,49 @@
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
+/* Fond animé avec dégradé et grille cyber */
 body {
   font-family: system-ui, -apple-system, sans-serif;
-  background-color: var(--bg-color);
+  background: linear-gradient(135deg, #070a10 0%, #0a0e17 50%, #0d1527 100%);
+  background-size: 400% 400%;
+  animation: cyberGradient 12s ease infinite;
   color: var(--text-main);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  position: relative;
+  overflow-x: hidden;
 }
 
-/* En-tête Cyber */
+/* Grille animée en arrière-plan */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background-image: 
+    linear-gradient(rgba(0, 243, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 243, 255, 0.04) 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none;
+  z-index: 0;
+  animation: gridMove 25s linear infinite;
+}
+
+@keyframes cyberGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-50px, -50px); }
+}
+
+/* En-tête */
 header {
   position: sticky;
   top: 0;
@@ -60,6 +93,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
+  position: relative;
+  z-index: 1;
 }
 
 .logo {
@@ -92,7 +127,6 @@ nav {
   background: rgba(0, 243, 255, 0.1);
 }
 
-/* Bouton Dark/Light */
 #theme-toggle {
   background: transparent;
   border: 1px solid var(--accent-cyan);
@@ -108,35 +142,60 @@ nav {
   box-shadow: var(--glow-cyan);
 }
 
-/* Contenu Principal */
+/* Main & Terminal */
 main {
   flex: 1;
   max-width: 1100px;
   width: 100%;
   margin: 0 auto;
   padding: 3rem 1.5rem;
+  position: relative;
+  z-index: 1;
 }
 
-/* Effet Typewriter (Accueil) */
 .hero-geek {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 60vh;
+  min-height: 65vh;
 }
 
 .terminal-window {
   background: var(--bg-card);
   border: 1px solid var(--border-color);
-  border-radius: 8px;
-  padding: 2rem;
+  border-radius: 10px;
+  padding: 2.5rem;
   box-shadow: var(--glow-cyan);
+  backdrop-filter: blur(8px);
 }
 
+/* Remplacement de l'en-tête verte */
 .terminal-header {
-  color: var(--accent-green);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-family: var(--font-mono);
-  margin-bottom: 1rem;
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+  background: rgba(0, 243, 255, 0.08);
+  padding: 0.4rem 0.9rem;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+  margin-bottom: 1.5rem;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--accent-green);
+  border-radius: 50%;
+  box-shadow: 0 0 8px var(--accent-green);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 .typewriter-text {
@@ -144,6 +203,7 @@ main {
   font-size: 1.8rem;
   color: var(--accent-cyan);
   min-height: 2.5rem;
+  margin-top: 0.5rem;
 }
 
 .cursor {
@@ -158,7 +218,32 @@ main {
   50% { opacity: 0; }
 }
 
-/* Structure en cartes cyberpunk */
+/* Bouton d'action dynamique */
+.btn-cyber {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 2rem;
+  padding: 0.8rem 1.6rem;
+  background: rgba(0, 243, 255, 0.08);
+  border: 1px solid var(--accent-cyan);
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-weight: 600;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: var(--glow-cyan);
+}
+
+.btn-cyber:hover {
+  background: var(--accent-cyan);
+  color: #0a0e17;
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(0, 243, 255, 0.6);
+}
+
+/* Grilles et cartes */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -212,7 +297,6 @@ main {
   border-radius: 4px;
 }
 
-/* Pied de page */
 footer {
   text-align: center;
   padding: 1.5rem;
@@ -220,4 +304,6 @@ footer {
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--text-muted);
+  position: relative;
+  z-index: 1;
 }
