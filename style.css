@@ -368,14 +368,85 @@ footer {
 }
 
 /* ==========================================
-   STYLE SECTION CONTACT
+   CORRECTION NAVIGATION ET CONTACT
    ========================================== */
 
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: #050a0f;
+  border-bottom: 1px solid #1e293b;
+}
+
+.navbar .logo a {
+  color: #00d2ff;
+  font-weight: 700;
+  text-decoration: none;
+  font-family: monospace, monospace;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar nav a {
+  color: #94a3b8;
+  text-decoration: none;
+  padding: 6px 12px;
+  font-size: 0.85rem;
+  font-family: monospace, monospace;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+  color: #00d2ff;
+  background-color: rgba(0, 210, 255, 0.1);
+  border: 1px solid rgba(0, 210, 255, 0.3);
+}
+
+/* Bouton Light Mode */
+.theme-toggle {
+  background: transparent;
+  border: 1px solid #1e293b;
+  color: #00d2ff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: monospace, monospace;
+  font-size: 0.8rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.theme-toggle .dot {
+  width: 8px;
+  height: 8px;
+  background-color: #ffb703;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Titre principal de section */
+.section-title {
+  color: #ffffff;
+  font-family: monospace, monospace;
+  font-size: 1.4rem;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Conteneur de la page contact */
 .contact-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  margin-top: 15px;
+  gap: 25px;
   margin-bottom: 40px;
 }
 
@@ -386,7 +457,8 @@ footer {
   border-radius: 6px;
   padding: 24px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-  flex: 1 1 300px;
+  flex: 1 1 400px;
+  box-sizing: border-box;
 }
 
 .contact-card {
@@ -395,16 +467,17 @@ footer {
 
 .contact-title {
   color: #00d2ff;
+  font-family: monospace, monospace;
   font-size: 1.1rem;
   font-weight: 700;
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .contact-desc {
   font-size: 0.9rem;
   color: #94a3b8;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   line-height: 1.5;
 }
 
@@ -417,7 +490,8 @@ footer {
 .contact-details li {
   font-size: 0.9rem;
   color: #cbd5e1;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+  font-family: inherit;
 }
 
 .contact-details strong {
@@ -427,7 +501,6 @@ footer {
 .contact-details a {
   color: #00d2ff;
   text-decoration: none;
-  transition: color 0.2s ease;
 }
 
 .contact-details a:hover {
@@ -436,7 +509,7 @@ footer {
 
 /* Formulaire */
 .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
 .form-group label {
@@ -459,7 +532,6 @@ footer {
   font-family: inherit;
   box-sizing: border-box;
   outline: none;
-  transition: border-color 0.2s ease;
 }
 
 .form-group input:focus,
@@ -476,6 +548,7 @@ footer {
   padding: 12px;
   font-size: 0.95rem;
   font-weight: 600;
+  font-family: monospace, monospace;
   cursor: pointer;
   transition: all 0.2s ease;
 }
@@ -483,4 +556,14 @@ footer {
 .contact-btn:hover {
   background-color: rgba(0, 210, 255, 0.1);
   box-shadow: 0 0 10px rgba(0, 210, 255, 0.2);
+}
+
+/* Pied de page */
+footer {
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #1e293b;
+  color: #64748b;
+  font-size: 0.85rem;
+  font-family: monospace, monospace;
 }
