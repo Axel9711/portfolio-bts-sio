@@ -8,33 +8,35 @@
 </head>
 <body>
 
-  <!-- Navigation identique a index.html -->
-  <header class="navbar">
-    <div class="logo"><a href="index.html">> AXEL.REBUS</a></div>
+  <!-- En-tete identique a index.html -->
+  <header>
     <nav>
-      <a href="index.html">Accueil</a>
-      <a href="index.html#presentation">Présentation</a>
-      <a href="index.html#competences">Compétences</a>
-      <a href="index.html#projets">Projets</a>
-      <a href="index.html#cv">CV & Stage</a>
-      <a href="contact.html" class="active">Contact</a>
+      <a href="index.html" class="logo">> AXEL.REBUS</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="index.html#presentation">Présentation</a></li>
+        <li><a href="index.html#competences">Compétences</a></li>
+        <li><a href="index.html#projets">Projets</a></li>
+        <li><a href="index.html#cv">CV & Stage</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <button id="theme-toggle">Mode Light</button>
     </nav>
-    <button class="theme-toggle" id="theme-toggle">
-      <span class="dot"></span> Mode Light
-    </button>
   </header>
 
   <!-- Contenu principal -->
-  <main class="container">
-    <h2 class="section-title">> Contact</h2>
+  <main>
+    <div class="terminal-header">
+      <span class="status-dot"></span> // SYSTEM_STATUS: ONLINE
+    </div>
 
-    <div class="contact-container">
-      <!-- Coordonnées -->
-      <div class="contact-card">
-        <h3 class="contact-title">Mes coordonnées</h3>
-        <p class="contact-desc">
-          N'hésite pas à me contacter pour toute opportunité, échange sur mes projets ou proposition de stage/alternance.
-        </p>
+    <h1 class="typewriter-text">> Contact<span class="cursor">_</span></h1>
+
+    <div class="contact-grid">
+      <!-- Coordonnees -->
+      <div class="card contact-card">
+        <h2>Mes coordonnées</h2>
+        <p>N'hésite pas à me contacter pour toute opportunité, échange sur mes projets ou proposition de stage/alternance.</p>
 
         <ul class="contact-details">
           <li><strong>Email :</strong> <a href="mailto:axel.rebus@exemple.fr">axel.rebus@exemple.fr</a></li>
@@ -46,29 +48,32 @@
       </div>
 
       <!-- Formulaire -->
-      <form class="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Nom / Entreprise</label>
-          <input type="text" id="name" name="name" placeholder="Ex : Jean Dupont" required>
-        </div>
+      <div class="card">
+        <h2>Envoyer un message</h2>
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="name">Nom / Entreprise</label>
+            <input type="text" id="name" name="name" placeholder="Ex : Jean Dupont" required>
+          </div>
 
-        <div class="form-group">
-          <label for="email">Adresse Email</label>
-          <input type="email" id="email" name="email" placeholder="nom@exemple.fr" required>
-        </div>
+          <div class="form-group">
+            <label for="email">Adresse Email</label>
+            <input type="email" id="email" name="email" placeholder="nom@exemple.fr" required>
+          </div>
 
-        <div class="form-group">
-          <label for="subject">Sujet</label>
-          <input type="text" id="subject" name="subject" placeholder="Ex : Proposition de stage..." required>
-        </div>
+          <div class="form-group">
+            <label for="subject">Sujet</label>
+            <input type="text" id="subject" name="subject" placeholder="Ex : Proposition de stage..." required>
+          </div>
 
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-        </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+          </div>
 
-        <button type="submit" class="contact-btn">Envoyer le message</button>
-      </form>
+          <button type="submit" class="btn-cyber">Envoyer le message</button>
+        </form>
+      </div>
     </div>
   </main>
 
