@@ -1,37 +1,73 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="dark">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact — Axel</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Axel Rebus</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <a href="index.html" class="logo">> AXEL.SYS</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="presentation.html">Présentation</a></li>
-                <li><a href="competences.html">Compétences</a></li>
-                <li><a href="projets.html">Projets</a></li>
-                <li><a href="cv.html">CV</a></li>
-                <li><a href="contact.html" class="active">Contact</a></li>
-                <li><button id="theme-toggle"></button></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <div class="card">
-            <h2>> Ping Me</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. N'hésitez pas à me contacter pour toute opportunité.</p>
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="logo"><a href="index.html">> AXEL.REBUS</a></div>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="index.html#presentation">Présentation</a>
+      <a href="index.html#competences">Compétences</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="index.html#cv">CV & Stage</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Contenu principal -->
+  <main class="container">
+    <h2>> Contact</h2>
+
+    <div class="contact-container">
+      <!-- Carte des coordonnées -->
+      <div class="contact-card">
+        <h3 class="contact-title">Mes coordonnées</h3>
+        <p class="contact-desc">
+          N'hésite pas à me contacter pour toute opportunité, échange sur mes projets ou proposition de stage/alternance.
+        </p>
+
+        <ul class="contact-details">
+          <li><strong>Email :</strong> <a href="mailto:axel.rebus@exemple.fr">axel.rebus@exemple.fr</a></li>
+          <li><strong>Téléphone :</strong> <a href="tel:+33600000000">06 00 00 00 00</a></li>
+          <li><strong>Localisation :</strong> Lyon, France</li>
+          <li><strong>LinkedIn :</strong> <a href="https://linkedin.com/in/axel-rebus" target="_blank" rel="noopener">linkedin.com/in/axel-rebus</a></li>
+          <li><strong>GitHub :</strong> <a href="https://github.com/axel-rebus" target="_blank" rel="noopener">github.com/axel-rebus</a></li>
+        </ul>
+      </div>
+
+      <!-- Formulaire de contact -->
+      <form class="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Nom / Entreprise</label>
+          <input type="text" id="name" name="name" placeholder="Ex : Jean Dupont" required>
         </div>
-    </main>
 
-    <footer>
-        <p>&copy; 2026 Axel</p>
-    </footer>
-    <script src="script.js"></script>
+        <div class="form-group">
+          <label for="email">Adresse Email</label>
+          <input type="email" id="email" name="email" placeholder="nom@exemple.fr" required>
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Sujet</label>
+          <input type="text" id="subject" name="subject" placeholder="Ex : Proposition de stage..." required>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+        </div>
+
+        <button type="submit" class="contact-btn">Envoyer le message</button>
+      </form>
+    </div>
+  </main>
+
 </body>
 </html>
