@@ -434,3 +434,14 @@ footer {
   border-color: var(--accent-cyan);
   box-shadow: var(--glow-cyan);
 }
+
+/* Titres de section (ex: > Focus Stage...) */
+.section-title {
+  font-family: var(--font-mono);
+  color: var(--accent-cyan);
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 2.5rem;
+  margin-bottom: 1.2rem;
+  text-shadow: var(--glow-cyan);
+}
