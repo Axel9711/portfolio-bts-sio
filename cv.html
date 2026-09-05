@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV — Axel</title>
+    <title>CV & Stage — Axel REBUS</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">> AXEL.SYS</a>
+            <a href="index.html" class="logo">> AXEL.REBUS</a>
             <ul class="nav-links">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="presentation.html">Présentation</a></li>
                 <li><a href="competences.html">Compétences</a></li>
                 <li><a href="projets.html">Projets</a></li>
-                <li><a href="cv.html" class="active">CV</a></li>
+                <li><a href="cv.html" class="active">CV & Stage</a></li>
                 <li><a href="contact.html">Contact</a></li>
                 <li><button id="theme-toggle"></button></li>
             </ul>
@@ -23,16 +23,49 @@
     </header>
 
     <main>
-        <div class="card">
-            <h2>> Curriculum Vitae</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Téléchargez mon CV au format PDF ci-dessous.</p>
+        <h2>> Curriculum Vitae & Expériences</h2>
+
+        <!-- Téléchargement du CV -->
+        <div class="card" style="margin-bottom: 2rem; text-align: center;">
+            <h3>Document officiel</h3>
+            <p style="margin-bottom: 1rem;">Consultez ou téléchargez mon CV au format PDF imprimable.</p>
+            <a href="CV_REBUS_Axel_stage_systeme_réseaux.pdf" class="tag" download style="padding: 0.6rem 1.2rem; font-size: 1rem; text-decoration: none;">📥 Télécharger le CV (PDF)</a>
+        </div>
+
+        <!-- Section Stage SIO 1 -->
+        <h2>> Focus Stage BTS SIO 1 (2026)</h2>
+        <div class="card" style="margin-bottom: 2rem; border-left-color: var(--accent-green);">
+            <h3>Stage Systèmes & Réseaux — 1er Juin au 3 Juillet 2026</h3>
+            <p><strong>Cadre :</strong> Stage de validation de 1ère année de BTS SIO SISR (5 semaines)</p>
             <br>
-            <a href="#" class="tag" style="padding: 0.5rem 1rem; font-size: 1rem;">Télécharger PDF</a>
+            <p><strong>Missions principales réalisées :</strong></p>
+            <ul style="margin-left: 1.5rem; color: var(--text-muted); margin-top: 0.5rem;">
+                <li><strong>Administration Active Directory & DNS :</strong> Création d'unités d'organisation, gestion des comptes utilisateurs, attribution des droits et configuration des contrôleurs de domaine sous Windows Server.</li>
+                <li><strong>Déploiement & Virtualisation :</strong> Configuration de machines virtuelles (VMware / VirtualBox) pour simuler des architectures d'entreprise.</li>
+                <li><strong>Infrastructures Réseaux :</strong> Configuration d'équipements de niveau 2/3, mise en place de plans d'adressage IP et sécurisation du réseau local.</li>
+                <li><strong>Assistance & Support Utilisateurs :</strong> Diagnostic d'incidents matériels et logiciels, résolution de dysfonctionnements système.</li>
+            </ul>
+        </div>
+
+        <!-- Synthèse du CV -->
+        <h2>> Historique & Formations</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Formations</h3>
+                <p><strong>2025 - 2027 :</strong> BTS SIO (Option SISR) — Institution des Chartreux, Lyon</p>
+                <p><strong>2024 - 2025 :</strong> Baccalauréat Général (Maths / Physique-Chimie, Mention AB) — Assomption Bellevue</p>
+            </div>
+
+            <div class="card">
+                <h3>Stages d'Observation Passés</h3>
+                <p><strong>Juin 2023 :</strong> Platinium Informatique (Hardware, réparation PC, vente de matériel)</p>
+                <p><strong>Février 2022 :</strong> Net Lyon ESN (Découverte du monde du travail, installation d'OS, tri de données)</p>
+            </div>
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 Axel</p>
+        <p>&copy; 2026 Axel REBUS — BTS SIO SISR</p>
     </footer>
     <script src="script.js"></script>
 </body>
