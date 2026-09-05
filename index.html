@@ -3,69 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio BTS SIO</title>
-    <style>
-        :root { --primary: #2563eb; --bg: #f8fafc; --text: #0f172a; }
-        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; line-height: 1.6; }
-        header, main { max-width: 900px; margin: 0 auto; padding: 2rem 1rem; }
-        header { border-bottom: 1px solid #e2e8f0; }
-        h1 { color: var(--primary); margin-bottom: 0.5rem; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 1rem; }
-        .card { background: white; padding: 1.5rem; border-radius: 8px; border: 1px solid #e2e8f0; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; background: white; }
-        th, td { border: 1px solid #e2e8f0; padding: 0.75rem; text-align: left; }
-        th { background: #f1f5f9; }
-    </style>
+    <title>Portfolio BTS SIO | Axel</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <header>
-        <h1>Portfolio - BTS SIO</h1>
-        <p>Étudiant en Brevet de Technicien Supérieur Services Informatiques aux Organisations.</p>
+        <nav>
+            <a href="#" class="logo">AXEL.SIO</a>
+            <ul class="nav-links">
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#competences">Compétences</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#synthese">Synthèse E4/E5</a></li>
+                <li><a href="#veille">Veille</a></li>
+                <li><a href="#cv">CV</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur mon <span>Portfolio</span></h1>
+            <p>Étudiant en BTS Services Informatiques aux Organisations</p>
+            <a href="#projets" class="btn">Découvrir mes projets</a>
+        </div>
+    </section>
+
     <main>
-        <section>
-            <h2>Présentation</h2>
-            <p>Bienvenue sur mon portfolio. Vous y trouverez mes projets réalisés en formation et en entreprise, mon tableau de synthèse ainsi que ma veille technologique.</p>
+        <section id="presentation">
+            <h2 class="section-title">Présentation</h2>
+            <div class="card">
+                <h3>À propos de moi</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
         </section>
 
-        <section>
-            <h2>Projets & Réalisations</h2>
+        <section id="competences">
+            <h2 class="section-title">Compétences</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>Projet 1 : Nom du projet</h3>
-                    <p>Description du besoin client, de la solution technique mise en place et des outils utilisés.</p>
+                    <h3>Gérer le patrimoine informatique</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <div class="tags">
+                        <span class="tag">GPO</span>
+                        <span class="tag">GLPI</span>
+                        <span class="tag">Sauvegarde</span>
+                    </div>
                 </div>
                 <div class="card">
-                    <h3>Projet 2 : Nom du projet</h3>
-                    <p>Description du besoin client, de la solution technique mise en place et des outils utilisés.</p>
+                    <h3>Répondre aux incidents</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <div class="tags">
+                        <span class="tag">Ticketing</span>
+                        <span class="tag">Support</span>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>Développer la présence en ligne</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+                    <div class="tags">
+                        <span class="tag">HTML/CSS</span>
+                        <span class="tag">Git</span>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Tableau de synthèse E4 / E5</h2>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Réalisation</th>
-                        <th>Compétence visée</th>
-                        <th>Cadre (TP / Stage)</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Projet 1</td>
-                        <td>Gérer le patrimoine informatique</td>
-                        <td>TP en cours</td>
-                    </tr>
-                </tbody>
-            </table>
+        <section id="projets">
+            <h2 class="section-title">Projets & Réalisations</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Projet 1 : Nom du projet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis nisl scelerisque mauris pellentesque pulvinar. Mauris tempor sodales est accessible en ligne.</p>
+                </div>
+                <div class="card">
+                    <h3>Projet 2 : Nom du projet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis nisl scelerisque mauris pellentesque pulvinar. Mauris tempor sodales est accessible en ligne.</p>
+                </div>
+                <div class="card">
+                    <h3>Projet 3 : Nom du projet</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin sagittis nisl scelerisque mauris pellentesque pulvinar. Mauris tempor sodales est accessible en ligne.</p>
+                </div>
+            </div>
         </section>
 
-        <section>
-            <h2>Veille Technologique</h2>
-            <p>Thème de ma veille : <em>Exemple : La conteneurisation avec Docker et Kubernetes</em></p>
+        <section id="synthese">
+            <h2 class="section-title">Tableau de Synthèse E4 / E5</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Réalisation / Projet</th>
+                            <th>Compétence visée</th>
+                            <th>Cadre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Projet 1</td>
+                            <td>Gérer le patrimoine informatique</td>
+                            <td>Épreuve E4 - TP</td>
+                        </tr>
+                        <tr>
+                            <td>Projet 2</td>
+                            <td>Répondre aux incidents et aux demandes</td>
+                            <td>Épreuve E5 - Stage</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="veille">
+            <h2 class="section-title">Veille Technologique</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Sujet de Veille : [Nom de ton sujet]</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sodales ligula in libero. Sed dignissim lacinia nunc. Curabitur tortor. Pellentesque nibh.</p>
+                </div>
+                <div class="card">
+                    <h3>Outils de collecte</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feedly, Google Alerts, Flux RSS.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="cv">
+            <h2 class="section-title">Mon CV</h2>
+            <div class="card">
+                <h3>Télécharger mon Curriculum Vitae</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Retrouvez le détail de mon parcours académique et professionnel.</p>
+                <br>
+                <a href="#" class="btn">Télécharger le CV (PDF)</a>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2 class="section-title">Contact</h2>
+            <div class="card">
+                <h3>Me contacter</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. N'hésitez pas à me joindre pour toute opportunité de stage ou question sur mon parcours.</p>
+            </div>
         </section>
     </main>
+
+    <footer>
+        <p>&copy; 2026 Axel — Portfolio BTS SIO</p>
+    </footer>
+
 </body>
 </html>
